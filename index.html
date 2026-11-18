@@ -162,7 +162,7 @@ body{background:#1A1A1A;color:#F1F3F5;font-family:Manrope,system-ui,sans-serif}
 <form name="lead" method="POST" data-netlify="true" hidden><input name="name"><input name="phone"><input name="email"><textarea name="summary"></textarea></form>
 
 <!-- Chat launcher -->
-<button id="fab" onclick="openChat()" aria-label="Open estimator" class="gold-btn fixed z-50 right-5 rounded-full px-5 py-4 shadow-2xl flex items-center gap-2" style="bottom:calc(20px + env(safe-area-inset-bottom,0px))">
+<button id="fab" onclick="openChat()" aria-label="Open estimator" class="gold-btn fixed z-50 right-5 rounded-full px-5 py-4 shadow-2xl flex items-center gap-2" style="bottom:calc(72px + env(safe-area-inset-bottom,0px))">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>Estimator
 </button>
 
@@ -174,7 +174,7 @@ body{background:#1A1A1A;color:#F1F3F5;font-family:Manrope,system-ui,sans-serif}
     <button onclick="closeChat()" aria-label="Close" class="text-2xl text-slate2/70 hover:text-gold leading-none">×</button>
   </div>
   <div id="log" class="flex-1 overflow-y-auto px-4 py-4 space-y-3"></div>
-  <div id="opts" class="p-4 border-t border-white/10 grid gap-2" style="padding-bottom:calc(16px + env(safe-area-inset-bottom,0px))"></div>
+  <div id="opts" class="p-4 border-t border-white/10 grid gap-2" style="padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))"></div>
 </section>
 
 <!-- Booking modal -->
@@ -341,7 +341,7 @@ function result(){
 let chatHist=[], pendingImg=null;
 function bot(t){const b=document.createElement("div");b.className="bubble bg-[#2e2e2e] rounded-lg rounded-tl-none px-4 py-3 text-sm max-w-[92%]";b.textContent=t;$("log").appendChild(b);$("log").scrollTop=$("log").scrollHeight;return b}
 function askMode(){
-  openChat();
+  $("chat").classList.remove("hidden");$("fab").classList.add("hidden");$("log").innerHTML="";chatHist=[];pendingImg=null;
   bot("Ask about our services or attach a photo of the area. Photos are processed by an AI service. For prices, please use the estimator.");
   $("opts").innerHTML='<div class="flex gap-2"><input id="aq" type="text" maxlength="500" placeholder="Type your question" class="flex-1 rounded px-3 py-3 text-sm text-char bg-white"><button id="as" class="gold-btn rounded px-4 text-sm">Send</button></div><div class="flex gap-2"><label class="opt rounded px-3 py-2 text-xs cursor-pointer flex-1 text-center"><span id="al">Attach photo</span><input id="af" type="file" accept="image/*" class="hidden"></label><button id="ab" class="opt rounded px-3 py-2 text-xs flex-1">Back to estimator</button></div>';
   $("as").onclick=sendAsk;
