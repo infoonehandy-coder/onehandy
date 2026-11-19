@@ -6,6 +6,10 @@
 <title>Handyman in Yonge & Eglinton, Toronto | OneHandy Finishing & Repair</title>
 <meta name="description" content="OneHandy: handyman and architectural finishing in Yonge & Eglinton, Midtown Toronto. Caulking, drywall & paint, trim carpentry, flooring. Fixed-price estimate online.">
 <link rel="canonical" href="https://onehandy.ca/">
+<meta name="theme-color" content="#1A1A1A">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does a handyman cost in Toronto?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the job. Use our estimator to get a fixed package price for caulking, drywall and paint, trim or flooring in under a minute."}}, {"@type": "Question", "name": "Do you supply the materials?", "acceptedAnswer": {"@type": "Answer", "text": "We can source materials for you, billed separately at cost with receipts, or you may supply your own. Procurement and site logistics are included in your labour package."}}, {"@type": "Question", "name": "Do you remove debris?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Choose the debris option in the estimator and hauling and disposal labour is included. Disposal facility fees, where applicable, are billed at cost. Your site is left swept and clean at handover."}}, {"@type": "Question", "name": "What if hidden damage is found?", "acceptedAnswer": {"@type": "Answer", "text": "We tell you immediately. Any extra repair is documented in a written change order before work continues."}}, {"@type": "Question", "name": "Which areas do you serve?", "acceptedAnswer": {"@type": "Answer", "text": "Yonge & Eglinton and surrounding Midtown Toronto neighbourhoods. Ask us if you are nearby."}}]}
+</script>
 <meta property="og:title" content="OneHandy | Handyman in Yonge & Eglinton, Toronto">
 <meta property="og:description" content="Precision repair and architectural finishing with fixed-price estimates. Serving Midtown Toronto.">
 <meta property="og:url" content="https://onehandy.ca/">
@@ -108,6 +112,16 @@ body{background:#1A1A1A;color:#F1F3F5;font-family:Manrope,system-ui,sans-serif}
     </div>
   </section>
 
+  <section class="max-w-6xl mx-auto px-5 pb-20">
+    <h2 class="font-serif text-4xl md:text-5xl font-semibold">Clear, itemized pricing</h2>
+    <p class="mt-3 max-w-2xl text-slate2/70">Your invoice shows exactly what you pay for, so there are no surprises.</p>
+    <div class="mt-10 grid md:grid-cols-3 gap-8">
+      <div class="border-l-2 border-gold pl-5"><h3 class="font-serif text-2xl font-semibold">Labour package</h3><p class="mt-2 text-slate2/75">A fixed price from the estimator, including procurement, site access and mobilization.</p></div>
+      <div class="border-l-2 border-gold pl-5"><h3 class="font-serif text-2xl font-semibold">Materials</h3><p class="mt-2 text-slate2/75">Billed separately at cost with receipts, or you can purchase them yourself.</p></div>
+      <div class="border-l-2 border-gold pl-5"><h3 class="font-serif text-2xl font-semibold">Disposal fees</h3><p class="mt-2 text-slate2/75">Where applicable, facility fees are billed at cost. Hauling labour is included.</p></div>
+    </div>
+  </section>
+
   <section id="areas" class="max-w-6xl mx-auto px-5 py-20">
     <h2 class="font-serif text-4xl md:text-5xl font-semibold">Serving Yonge &amp; Eglinton and nearby</h2>
     <p class="mt-3 max-w-2xl text-slate2/70">Handyman, caulking, drywall, trim and flooring services across Midtown and Downtown Toronto and North York, including:</p>
@@ -154,7 +168,7 @@ body{background:#1A1A1A;color:#F1F3F5;font-family:Manrope,system-ui,sans-serif}
 
 <footer class="border-t border-white/10 text-sm text-slate2/55">
   <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row justify-between gap-2">
-    <span>© 2026 OneHandy · onehandy.ca. All rights reserved.</span>
+    <span>© 2026 OneHandy · onehandy.ca. All rights reserved. · <a href="/privacy.html" class="underline hover:text-gold">Privacy</a></span>
     <span>Mon–Sat 8:00–17:00 · Handyman &amp; finishing in Yonge &amp; Eglinton, Toronto.</span>
   </div>
 </footer>
@@ -173,7 +187,7 @@ body{background:#1A1A1A;color:#F1F3F5;font-family:Manrope,system-ui,sans-serif}
     <button onclick="askMode()" class="text-xs text-gold underline ml-auto mr-3">Ask a question</button>
     <button onclick="closeChat()" aria-label="Close" class="text-2xl text-slate2/70 hover:text-gold leading-none">×</button>
   </div>
-  <div id="log" class="flex-1 overflow-y-auto px-4 py-4 space-y-3"></div>
+  <div id="log" aria-live="polite" class="flex-1 overflow-y-auto px-4 py-4 space-y-3"></div>
   <div id="opts" class="p-4 border-t border-white/10 grid gap-2" style="padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))"></div>
 </section>
 
