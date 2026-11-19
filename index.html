@@ -173,8 +173,12 @@ body{background:#1A1A1A;color:#F1F3F5;font-family:Manrope,system-ui,sans-serif}
   </div>
 </footer>
 
-<form name="lead" method="POST" data-netlify="true" hidden><input name="name"><input name="phone"><input name="email"><textarea name="summary"></textarea></form>
-
+<form action="https://formspree.io/f/mgakzbzp" method="POST">
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="tel" name="phone" placeholder="Phone">
+  <button type="submit">Request My Date</button>
+</form>
 <!-- Chat launcher -->
 <button id="fab" onclick="openChat()" aria-label="Open estimator" class="gold-btn fixed z-50 right-5 rounded-full px-5 py-4 shadow-2xl flex items-center gap-2" style="bottom:calc(72px + env(safe-area-inset-bottom,0px))">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/></svg>Estimator
